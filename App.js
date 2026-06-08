@@ -58,3 +58,7 @@ function draw(){
 }
 
 draw();
+ctx.beginPath();
+ctx.arc(300,200,10,0,Math.PI*2);
+ctx.fillStyle = "yellow";
+ctx.fill();
