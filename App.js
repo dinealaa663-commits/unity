@@ -62,3 +62,20 @@ ctx.beginPath();
 ctx.arc(300,200,10,0,Math.PI*2);
 ctx.fillStyle = "yellow";
 ctx.fill();
+<div id="score">0</div>
+let score = 0;
+
+score++;
+
+document.getElementById("score").innerText = score;
+function gameLoop(){
+
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+
+    ctx.fillStyle = "cyan";
+    ctx.fillRect(x,y,80,80);
+
+    requestAnimationFrame(gameLoop);
+}
+
+gameLoop();
