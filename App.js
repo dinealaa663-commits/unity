@@ -36,3 +36,25 @@ ctx.fillRect(100,100,120,120);
 });
 
 runCode();
+let x = 100;
+let y = 100;
+
+document.addEventListener("keydown", (e) => {
+
+    if(e.key === "ArrowRight") x += 10;
+    if(e.key === "ArrowLeft") x -= 10;
+    if(e.key === "ArrowUp") y -= 10;
+    if(e.key === "ArrowDown") y += 10;
+
+    draw();
+});
+
+function draw(){
+
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+
+    ctx.fillStyle = "cyan";
+    ctx.fillRect(x,y,80,80);
+}
+
+draw();
